@@ -91,14 +91,14 @@ Begin by logging into the MySQL root account:
 	mysql -u root -p
 You will be prompted for MySQL's root account password, which you set when you installed MySQL. Once the correct password has been submitted, you will be given a MySQL command prompt.
 
-First, we'll create a database that Magento can write data to. In this example, the database will be called <mark>magento</mark>, but you can name it whatever you prefer.
+First, we'll create a database that Magento can write data to. In this example, the database will be called `magento`, but you can name it whatever you prefer.
 
 	CREATE DATABASE magento;
 **Note**: Every MySQL statement must end in a semi-colon (`;`), so check to make sure that you included that if you are running into any issues.
 
 Next, we are going to create a new MySQL user account that will be used exclusively to operate on the new database. Creating one-function databases and accounts is a good idea, as it allows for better control of permissions and other security needs.
 
-I am going to call the new account <mark>magento_user</mark> and will assign it a password of <mark>password</mark>. You should definitely use a different username and password, as these examples are not very secure.
+I am going to call the new account `magento_user` and will assign it a password of `password`. You should definitely use a different username and password, as these examples are not very secure.
 
 	CREATE USER magento_user@localhost IDENTIFIED BY 'password';
 At this point, you have a database and a user account that are each specifically made for Magento. However, the user has no access rights to the database. We need to link the two components together by granting our user access privileges to the database:
